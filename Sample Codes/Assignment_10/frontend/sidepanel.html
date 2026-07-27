@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>GenAI Software Engineering Pipeline</h2>
+
+<textarea id="spec" placeholder="Paste specification (leave empty if using an audio file below)"></textarea>
+
+<input type="file" id="audio" accept=".wav">
+
+<button id="generateReq">Generate Requirements</button>
+
+<button id="generateStories">Generate User Stories</button>
+
+<button id="verifyInvest">Verify INVEST</button>
+
+<button id="generatePrototype">Generate Prototype</button>
+
+<button id="previewPrototype">Preview Prototype</button>
+
+<button id="generateTests">Generate Test Cases</button>
+
+<p id="status"></p>
+
+<pre id="output"></pre>
+
+<div id="testChecklist"></div>
+
+<button id="downloadReport" style="display:none">Download Test Execution Report</button>
+
+<button id="download">Download Artifact</button>
+
+<script src="sidepanel.js"></script>
+
+</body>
+
+</html>

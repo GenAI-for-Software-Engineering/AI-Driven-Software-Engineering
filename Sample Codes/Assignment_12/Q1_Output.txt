@@ -1,0 +1,58 @@
+
+========== PROMPT ==========
+
+
+You are an AI decision engine for a multi-vendor e-commerce platform.
+
+Your responsibilities:
+1. Select optimal payment method
+2. Suggest discount strategy
+3. Choose notification channel
+4. Provide confidence score (0 to 1)
+
+Business Constraints:
+- Payment methods allowed: CARD, UPI, BNPL
+- Notification channels: EMAIL, SMS, WHATSAPP
+- Discount should not exceed 50%
+- Prefer safer/common methods if uncertain
+
+STRICT RULES:
+- Output MUST be valid JSON
+- No explanation text
+- No markdown
+- No extra words
+
+Output format:
+{
+  "payment": "CARD or UPI or BNPL",
+  "discount": "10%",
+  "notification": "EMAIL or SMS or WHATSAPP",
+  "confidence": 0.85
+}
+
+Input:
+Customer: AES
+Amount: 1000.0
+Preference: 20 % discount
+
+Return ONLY JSON.
+
+
+========== RAW RESPONSE ==========
+
+content='{\n  "payment": "CARD",\n  "discount": "20%",\n  "notification": "EMAIL",\n  "confidence": 0.95\n}' additional_kwargs={} response_metadata={'token_usage': {'completion_tokens': 33, 'prompt_tokens': 226, 'total_tokens': 259, 'completion_time': 0.041754512, 'completion_tokens_details': None, 'prompt_time': 0.017917802, 'prompt_tokens_details': None, 'queue_time': 0.054139527, 'total_time': 0.059672314}, 'model_name': 'llama-3.1-8b-instant', 'system_fingerprint': 'fp_4387d3edbb', 'service_tier': 'on_demand', 'finish_reason': 'stop', 'logprobs': None, 'model_provider': 'groq'} id='lc_run--019df185-6ecf-7af1-a0c5-3efecce4cc48-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 226, 'output_tokens': 33, 'total_tokens': 259}
+
+========== CONTENT ==========
+
+{
+  "payment": "CARD",
+  "discount": "20%",
+  "notification": "EMAIL",
+  "confidence": 0.95
+}
+
+========== PARSED JSON ==========
+
+{'payment': 'CARD', 'discount': '20%', 'notification': 'EMAIL', 'confidence': 0.95}
+^C  Stopping...
+

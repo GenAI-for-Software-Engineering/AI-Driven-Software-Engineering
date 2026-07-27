@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GenAI SE Pipeline",
+  "version": "1.0",
+
+  "permissions": ["sidePanel"],
+
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+
+  "action": {
+    "default_title": "Open Pipeline"
+  }
+}
